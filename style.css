@@ -116,7 +116,7 @@ body {
     }
 
     .hero-text h1 {
-        font-size: 36px;
+        font-size: 34px;
         margin-top: 90px;
     }
 
@@ -344,6 +344,10 @@ body {
     color: #EECE38;
 }
 
+a{
+    text-decoration: none;
+}
+
 @media (max-width: 991px) {
     .fresh-item {
         padding: 0px 0px 0px 16px;
@@ -505,6 +509,10 @@ body {
         font-weight: 400;
         margin-top: 20px;
     }
+
+    .watch-btn {
+    margin-top: 0px;
+}
 }
 
 .fresh-item .card {
@@ -533,6 +541,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 5px;
+    color: white;
 }
 
 .card-subtitle {
@@ -587,13 +596,30 @@ body {
 .card-content-item p {
     margin: 0;
     font-size: 14px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
-.music-item-inner .card {
+
+.card-content-item h5 {
+    width: 58px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content-item h6 {
+    text-align: right;
+}
+
+.card-content-item p {
+    text-align: right;
+}
+
+.music-item-inner .card a {
     display: flex;
     flex-direction: row;
     padding: 6px;
+    color: black;
 }
 
 .music-item-inner img {
