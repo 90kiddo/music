@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <style>
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      background-color: #121212; 
+      color: #fff;
+    }
+
+    .player-container {
+      text-align: center;
+    }
+
+    audio {
+      width: 300px; 
+      outline: none;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="player-container">
+    
+    <audio id="audioPlayer" controls controlsList="nodownload">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script>
+    
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+
+    if(file){
+      const audio = document.getElementById('audioPlayer');
+      audio.src = decodeURIComponent(file);
+      audio.load();
+      audio.play().catch(() => {}); 
+    } else {
+      document.querySelector('.player-container').innerHTML = "<p>No file provided!</p>";
+    }
+  </script>
+</body>
+</html>

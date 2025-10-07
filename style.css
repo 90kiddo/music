@@ -826,3 +826,37 @@ a{
 }
 
 /* footer ends here */
+
+/* myaccount starts from here */
+
+.subscribe-section {
+    min-height: calc(100vh - 150px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.subscribe-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+}
+
+.subscribe-content .btn {
+    background-color: #44444E; 
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.subscribe-content .btn:hover {
+    background-color: #44444E;
+    transform: scale(1.05);
+}
+
+
+/* myaccount ends here */
